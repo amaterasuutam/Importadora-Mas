@@ -1,0 +1,50 @@
+Actúa como un diseñador UI/UX y desarrollador Frontend experto. Necesito que generes la estructura maquetada en HTML5 semántico y estilos CSS3 (puedes incluir Tailwind CSS o CSS puro bien estructurado) para la página principal y catálogo de una tienda e-commerce llamada "Importadora Mas".
+
+REQUISITOS DE DISEÑO Y ESTILOS:
+1. Paleta de Colores:
+   - Color principal/fondo dominantes: Blanco (#FFFFFF) y tonos claros.
+   - Color secundario/acentos/botones destacados: Rojo (#D32F2F o similar).
+   - Detalle sutil/textos: Negro/Gris oscuro (#111111 / #333333).
+2. Estilo Visual:
+   - Limpio, moderno, confiable, visualmente atractivo (similar al estándar de grandes tiendas como Sodimac).
+   - Totalmente RESPONSIVE y optimizado "Mobile-First" (el 85% de las visitas serán desde celulares).
+   - Componentes intuitivos, botones claros y de fácil lectura para usuarios de 30 a 60 años.
+
+ESTRUCTURA DE LA PÁGINA (HEADER, BODY, FOOTER):
+
+- HEADER / ENCABEZADO:
+  * Barrita superior con mensaje de envíos/promociones.
+  * Logo de "Importadora Mas".
+  * Buscador central (con sugerencia de palabras clave: características, funcionalidad).
+  * Accesos rápidos: Selector de "Usuario / Invitado", Carrito de Compras con contador.
+  * Menú de navegación por categorías: Electrónica, Hogar, Herramientas, Outdoor, Electrodomésticos, Vehículos/Accesorios.
+
+- SECCIÓN PRINCIPAL (HERO / BANNER):
+  * Banners dinámicos de ofertas de temporada (destacar Focos Solares, Camping, Toldos, Alfombras).
+  * Sección de "Garantía y Confianza": Envíos a todo Chile (BlueExpress fuera de Linares / Retiro en tienda Linares), pago seguro, atención rápida.
+
+- CATÁLOGO Y GRILLA DE PRODUCTOS:
+  * Filtros visuales simples: Por precio, destacando Ofertas, Productos Nuevos, Stock disponible.
+  * Tarjeta de Producto (Product Card):
+    - Imagen limpia del producto.
+    - Etiqueta de "Oferta" o "Nuevo".
+    - Nombre del producto, código y categoría.
+    - Marca (Genérica o específica).
+    - Precio normal y Precio Oferta destacado.
+    - Botón claro: "Añadir al carrito" y botón para "Ver detalle/videos y reseñas".
+    - Botón discreto para compartir en redes sociales (WhatsApp, Facebook, Instagram).
+
+- SECCIÓN DE CATEGORÍAS DESTACADAS:
+  * Grilla visual mostrando categorías principales (Electrónica, Hogar, Herramientas, Outdoor).
+
+- ELEMENTOS FLOTANTES Y FOOTER:
+  * Botón Flotante de WhatsApp ubicado abajo a la derecha, para contacto directo.
+  * Footer organizado:
+    - Información de contacto, ubicación física en Linares, horarios de atención.
+    - Enlaces directos a Redes Sociales oficiales (@importadoramaslinares en Instagram/Facebook, TikTok, WhatsApp).
+    - Menú de políticas (Términos y condiciones, Devoluciones, Despacho, Cookies).
+
+ENTREGABLE REQUERIDO:
+- Proporciona el código HTML5 semántico estructurado con comentarios indicando cada sección.
+- Proporciona el código CSS aislado con variables para colores y diseño totalmente responsive (usando Flexbox y CSS Grid).
+- NO agregues código de backend ni base de datos; genera únicamente la plantilla visual interactiva y limpia para que nosotros podamos programar la lógica posteriormente.

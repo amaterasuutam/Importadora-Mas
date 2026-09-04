@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-card-border: hsl(var(--card-border));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --font-sans: var(--app-font-sans);
+  --font-serif: var(--app-font-serif);
+  --font-mono: var(--app-font-mono);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --background: 37 35% 97%;
+  --foreground: 222 23% 16%;
+  --border: 35 21% 88%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 23% 16%;
+  --card-border: 35 21% 88%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 23% 16%;
+  --primary: 5 76% 47%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 39 90% 93%;
+  --secondary-foreground: 23 40% 27%;
+  --muted: 36 24% 93%;
+  --muted-foreground: 220 11% 45%;
+  --accent: 40 91% 54%;
+  --accent-foreground: 23 40% 20%;
+  --destructive: 5 76% 47%;
+  --destructive-foreground: 0 0% 100%;
+  --input: 35 21% 82%;
+  --ring: 5 76% 47%;
+  --sidebar: 38 35% 96%;
+  --sidebar-foreground: 222 23% 16%;
+  --sidebar-border: 35 21% 88%;
+  --sidebar-primary: 5 76% 47%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 39 90% 93%;
+  --sidebar-accent-foreground: 23 40% 27%;
+  --sidebar-ring: 5 76% 47%;
+  --app-font-sans: 'DM Sans', sans-serif;
+  --app-font-serif: Georgia, serif;
+  --app-font-mono: 'Space Grotesk', monospace;
+  --radius: .8rem;
+}
+
+.dark {
+  --background: 222 23% 12%;
+  --foreground: 37 35% 97%;
+  --border: 222 16% 26%;
+  --card: 222 20% 16%;
+  --card-foreground: 37 35% 97%;
+  --card-border: 222 16% 26%;
+  --popover: 222 20% 16%;
+  --popover-foreground: 37 35% 97%;
+  --primary: 5 76% 54%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 29 31% 24%;
+  --secondary-foreground: 39 90% 93%;
+  --muted: 222 16% 23%;
+  --muted-foreground: 35 11% 70%;
+  --accent: 40 91% 54%;
+  --accent-foreground: 23 40% 20%;
+  --input: 222 16% 30%;
+  --ring: 5 76% 54%;
+}
+
+@layer base {
+  * { @apply border-border; }
+  body { @apply font-sans antialiased bg-background text-foreground; }
+}
+
+html { scroll-behavior: smooth; }
+body { min-width: 320px; }
+button, a, input, select { -webkit-tap-highlight-color: transparent; }
+.font-display { font-family: var(--app-font-mono); }
+.container-shop { width: min(1180px, calc(100% - 32px)); margin-inline: auto; }
+.texture { position: relative; isolation: isolate; }
+.texture::after { content:""; position:absolute; inset:0; pointer-events:none; z-index:-1; opacity:.18; background-image: radial-gradient(#b34a34 0.6px, transparent .7px); background-size:7px 7px; mask-image: linear-gradient(120deg, #000, transparent 70%); }
+.shadow-warm { box-shadow: 0 18px 44px rgba(120,48,31,.10); }
+.shadow-card { box-shadow: 0 4px 15px rgba(82,55,39,.07); }
+.appear { animation: appear .55s cubic-bezier(.2,.75,.2,1) both; }
+.float-in { animation: float-in .7s cubic-bezier(.2,.75,.2,1) both; }
+@keyframes appear { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
+@keyframes float-in { from { opacity:0; transform:translateY(16px) scale(.98); } to { opacity:1; transform:translateY(0) scale(1); } }
+@keyframes pulse-soft { 0%,100% { transform:scale(1); } 50% { transform:scale(1.04); } }
+.pulse-soft { animation:pulse-soft 2.4s ease-in-out infinite; }
+@media (min-width: 768px) { .container-shop { width:min(1180px, calc(100% - 64px)); } }

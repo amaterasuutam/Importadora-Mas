@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Importadora Mas"
+description = "A responsive ecommerce storefront for Importadora Mas, showcasing seasonal deals, product catalog browsing, trust and shipping information, and a lightweight interactive shopping cart for customers in Linares and across Chile."
+version = "1.0.0"
+id = "artifacts/importadora-mas"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23312
+
+[services.development]
+run = "pnpm --filter @workspace/importadora-mas run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/importadora-mas", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/importadora-mas/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23312"
+BASE_PATH = "/"

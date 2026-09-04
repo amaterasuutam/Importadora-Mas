@@ -1,6 +1,6 @@
-# [Project name]
+# Importadora Mas
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+Tienda e-commerce responsive para descubrir productos útiles, ofertas y soluciones para el hogar, herramientas y aire libre desde Linares hacia todo Chile.
 
 ## Run & Operate
 
@@ -22,15 +22,19 @@ _Replace the heading above with the project's name, and this line with one sente
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `artifacts/importadora-mas` — storefront web app and local demo catalog.
+- `artifacts/importadora-mas/src/App.tsx` — single-page storefront, catalog interactions, product detail, search and cart state.
+- `artifacts/importadora-mas/src/index.css` — visual theme, responsive layout utilities and motion.
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+- The first release is frontend-only with local demo data so the buying experience can be validated before connecting inventory or checkout services.
+- Product browsing, filtering, detail views and cart behavior are implemented in the storefront to keep the prototype immediately usable.
+- The design prioritizes mobile browsing while preserving a wider retail layout on desktop.
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+Importadora Mas showcases seasonal deals and practical products with search suggestions, category navigation, offer/new/stock/price filters, product details, local trust messaging, Linares pickup information, and a lightweight cart flow that ends in WhatsApp-style order coordination.
 
 ## User preferences
 
