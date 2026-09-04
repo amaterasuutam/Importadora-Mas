@@ -41,26 +41,26 @@
   --card-border: 35 21% 88%;
   --popover: 0 0% 100%;
   --popover-foreground: 222 23% 16%;
-  --primary: 5 76% 47%;
+  --primary: 7 45% 47%;
   --primary-foreground: 0 0% 100%;
-  --secondary: 39 90% 93%;
-  --secondary-foreground: 23 40% 27%;
-  --muted: 36 24% 93%;
+  --secondary: 35 32% 94%;
+  --secondary-foreground: 22 27% 29%;
+  --muted: 36 14% 94%;
   --muted-foreground: 220 11% 45%;
-  --accent: 40 91% 54%;
-  --accent-foreground: 23 40% 20%;
-  --destructive: 5 76% 47%;
+  --accent: 39 53% 57%;
+  --accent-foreground: 23 28% 22%;
+  --destructive: 7 45% 47%;
   --destructive-foreground: 0 0% 100%;
   --input: 35 21% 82%;
-  --ring: 5 76% 47%;
+  --ring: 7 45% 47%;
   --sidebar: 38 35% 96%;
   --sidebar-foreground: 222 23% 16%;
   --sidebar-border: 35 21% 88%;
-  --sidebar-primary: 5 76% 47%;
+  --sidebar-primary: 7 45% 47%;
   --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 39 90% 93%;
-  --sidebar-accent-foreground: 23 40% 27%;
-  --sidebar-ring: 5 76% 47%;
+  --sidebar-accent: 35 32% 94%;
+  --sidebar-accent-foreground: 22 27% 29%;
+  --sidebar-ring: 7 45% 47%;
   --app-font-sans: 'DM Sans', sans-serif;
   --app-font-serif: Georgia, serif;
   --app-font-mono: 'Space Grotesk', monospace;
@@ -109,3 +109,19 @@ button, a, input, select { -webkit-tap-highlight-color: transparent; }
 @keyframes pulse-soft { 0%,100% { transform:scale(1); } 50% { transform:scale(1.04); } }
 .pulse-soft { animation:pulse-soft 2.4s ease-in-out infinite; }
 @media (min-width: 768px) { .container-shop { width:min(1180px, calc(100% - 64px)); } }
+
+/* Brand accents stay present without competing with the logo or product imagery. */
+@layer utilities {
+  .bg-\[\#c9362b\] { background-color: #b54b42 !important; }
+  .bg-\[\#a92e26\] { background-color: #963c35 !important; }
+  .bg-\[\#f6b83f\] { background-color: #d5ad62 !important; }
+  .bg-\[\#f3c248\] { background-color: #dfbd73 !important; }
+  .bg-\[\#f8e8d6\] { background-color: #f5eee5 !important; }
+  .bg-\[\#f7e4ce\] { background-color: #f2e9df !important; }
+  .bg-\[\#f1ece4\] { background-color: #f0ece7 !important; }
+  .bg-\[\#f5f2ec\] { background-color: #f7f5f1 !important; }
+  .bg-\[\#e9eee8\] { background-color: #eef0ec !important; }
+  .text-\[\#c9362b\] { color: #b54b42 !important; }
+  .text-\[\#f6b83f\] { color: #d5ad62 !important; }
+  .border-\[\#c9362b\] { border-color: #b54b42 !important; }
+}
